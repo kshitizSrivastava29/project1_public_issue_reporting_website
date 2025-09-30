@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civic Issue Reporting</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1>Civic Issue Reporting Portal</h1>
+  </header>
+
+  <div class="container">
+    <!-- Issue Form -->
+    <form id="issueForm">
+      <label for="issueType">Select Issue Type:</label>
+      <select id="issueType" required>
+        <option value="">--Choose an issue--</option>
+        <option value="Pothole">Pothole</option>
+        <option value="Broken Road">Broken Road</option>
+        <option value="Street Light">Broken Street Light</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="description">Description:</label>
+      <textarea id="description" rows="4" placeholder="Describe the issue..." required></textarea>
+
+      <label for="photo">Upload Photo :</label>
+      <input type="file" id="photo" accept="image/*" required >
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" placeholder="Enter location..." required>
+      <button type="button" id="useLocation">Use My Current Location</button>
+
+      <div id="map"></div>
+
+      <button type="submit">Submit Issue</button>
+    </form>
+
+    <!-- Status Section -->
+    <div class="status-section">
+      <h2>Check Your Status</h2>
+      <button id="checkStatus">Check Status</button>
+      <textarea id="statusResult" rows="8" readonly placeholder="Your issue status will appear here..."></textarea>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
