@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Civic Issues</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <header class="admin-header">
+    <h1>Civic Issue Admin Dashboard</h1>
+  </header>
+
+  <main class="dashboard">
+    <h2>Reported Issues</h2>
+    <table id="issuesTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Photo</th>
+          <th>Location</th><!-- Add "Reported At " column when you build a database-->
+          <th>Current status</th>
+          <th>Update</th>
+          <th>Add Image (Required for Resolved)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Issues will be loaded here dynamically -->
+      </tbody>
+    </table>
+  </main>
+<!-- Modal for viewing images -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
